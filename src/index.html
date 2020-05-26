@@ -69,7 +69,11 @@
                 <!-- 04：趣味（セレクトボックス） -->
                 <!-- <p>
                     <label for="hobby">趣味：</label>
-                    <select name="hobby" id="hobby_20200519">
+                    <select name="hobby"
+                        id="hobby_20200519"
+                        v-model="hobby_20200519"
+                    >
+                        <option disabled value="">趣味選択</option>
                         <option v-for="hobbyData in hobbyDatas"
                             v-bind:value="hobbyData.hobbyValue"
                         >
@@ -116,11 +120,12 @@
                         name_20200519: null,
                         age_20200519: null,
                         tel_20200519: null,
+                        // hobby_20200519: null,
                         // hobbyDatas: [
                         //     { hobbyValue: 1, hobbyName: サッカー},
                         //     { hobbyValue: 2, hobbyName: 野球},
                         //     { hobbyValue: 3, hobbyName: バスケット}
-                        // ]
+                        // ],
                     },
                     methods: {
                         submit_form_20200519: function(e) {
